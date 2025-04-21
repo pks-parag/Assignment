@@ -15,11 +15,11 @@ void searchSelect(int arr[],int n );
 int main()
 {
     printf("-----------------Welcome to Sorting World----------------\n\n\n");
-    printf("What is your array size?\n Ans :");
+    printf(" What is your array size?\n Ans :");
     int arraySize,cho;
     scanf(" %d",&arraySize);
     int arr[arraySize];
-    printf("Enter your array : " );
+    printf(" Enter your array : " );
     for (int i=0;i<arraySize;i++){
         scanf(" %d",&arr[i]);
     }
@@ -48,7 +48,7 @@ int main()
                 printArray(arr,arraySize);
                 break;
             case 6:
-                printf("\n\n Bye ! \n\n" );
+                printf("\n\n Bye !\n Thank you !\n\n" );
                 exit(0);
 
 
@@ -58,19 +58,19 @@ int main()
     return 0;
 }
 void arrayDefineSort(int arr[],int n ){
-     printf("Inpur Sort Type : \n 1. Bubble Sort \n 2.Seletion Sort \n Please Enter (1 or 2): ");
+     printf("\n Input Sort Type : \n 1.Bubble Sort \n 2.Seletion Sort \n Please Enter (1 or 2): ");
                 int ch3;
                 scanf("%d",&ch3);
                 if(ch3==1){
-                    printf("-----Bubble Sort-----\n");
+                    printf("\n-----Bubble Sort-----");
                     bubbleShort(arr,n);
-                    printf("-----Array Print-----\n");
+                    //printf("-----Array Print-----\n");
                     printArray(arr,n);
                 }
                  else if(ch3==2){
-                    printf("-----Seletion Sort-----\n");
+                    printf("\n-----Seletion Sort-----");
                     selectionShort(arr,n);
-                    printf("-----Array Print-----\n");
+                    //printf("-----Array Print-----\n");
                     printArray(arr,n);
                 }
                 else{
@@ -81,10 +81,10 @@ void arrayDefineSort(int arr[],int n ){
 void update(int arr[],int n){
 
                 int up1,val1;
-               printf(" Index that  you want update : ");
+               printf("\n Index that  you want update : ");
                scanf("%d",&up1);
 
-               printf("Enter Value for index %d  : ",up1);
+               printf("\n Enter Value for index %d  : ",up1);
                scanf("%d",&val1);
                arr[up1]=val1;
                while(1){
@@ -99,7 +99,7 @@ void update(int arr[],int n){
                 break;
                }
                else if(ch1==3){
-                printf("\n Your Array : ");
+                //printf("\n Your Array : ");
                 printArray(arr,n);
 
                }
@@ -111,7 +111,7 @@ void update(int arr[],int n){
 }
 }
 void printArray(int arr[],int n ){
-    printf("-----Your Array------\n");
+    printf("\n-----Your Array------\n");
     for (int i=0;i<n;i++){
         printf(" %d",arr[i]);
 }printf("\n");
@@ -146,20 +146,20 @@ void selectionShort(int arr[],int n ){
     }
 void linearSearch(int arr[],int n){
     int num, found=0;
-    printf("What value do you Searching ?\n : ");
+    printf("\n What value do you Searching ?\n : ");
     scanf("%d",&num);
     for(int i =0;i<n;i++){
         if (arr[i]==num){
-            printf("Your value is found ! Index : %d",i);
+            printf("\n Your value is found ! Index : %d",i);
             found=1;
         }
 
     }
-    if(!found){printf("Your Value doesnot found! \n ");}
+    if(!found){printf("\n Your Value doesnot found! \n ");}
 }
 void binarySearch(int arr[],int n){
     int num;
-    printf("What value do you Searching ?\n : ");
+    printf("\n What value do you Searching ?\n : ");
     scanf("%d",&num);
     bubbleShort(arr,n);
     int st=0,en=n-1,found=0;
@@ -171,12 +171,12 @@ void binarySearch(int arr[],int n){
         else if(num<arr[mid]){
             en=mid-1;
         }
-        else{printf("Your value is found ! Index : %d \n ",mid);
+        else{printf("\n Your value is found ! Index : %d \n ",mid);
         found=1;}
     }
 
 
-        if(!found){ printf("Your Value doesnot found! \n ");}
+        if(!found){ printf("\n Your Value doesnot found! \n ");}
     }
 
 void searchSelect(int arr[],int n ){
