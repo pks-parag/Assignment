@@ -14,7 +14,7 @@ void searchSelect(int arr[],int n );
 
 int main()
 {
-    printf("-----------------Welcome to Sorting World----------------\n\n\n");
+    printf("-----------------Welcome to Array World----------------\n\n\n");
     printf(" What is your array size?\n Ans :");
     int arraySize,cho;
     scanf(" %d",&arraySize);
@@ -34,7 +34,9 @@ int main()
 
                 break;
             case 2 :
-                printf(" I can not delete a index . You can Update Value with respect to index <._.> \n");
+                
+                deleteArray(arr,arraySize);
+
                 break;
             case 3:
                arrayDefineSort(arr,arraySize);
@@ -190,4 +192,14 @@ void searchSelect(int arr[],int n ){
         binarySearch(arr,n);
     }
     else printf("Enter Valid Input ! \n");
+}
+void deleteArray(int arr[],int n){
+    int de;
+    printf("\n Enter a Index That you Want to Delete : ");
+    scanf("%d",&de);
+    for(int i =de;i<n-1;i++){
+        arr[i]=arr[i+1];
+    }n--;
+    printArray(arr,n);
+
 }
